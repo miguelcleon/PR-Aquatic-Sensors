@@ -10,8 +10,8 @@ library(cowplot)
 library(grid)
 library(scales)
 
-#pull final data in
-QS <- read.csv2("QS Maria Final Export.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+#pull exported data in
+QS <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QS Maria Final Export.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 #pull recent data in
 QSnew <- read.csv2("QS NO3 new.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))

@@ -61,7 +61,7 @@ ggplot(qsusgs, aes(USGS_STAGE,USGS_cfps)) +
 
 
 #new QS data from ODM2 server
-qsczo <- read.csv2("QS_discharge_curve.csv", header = T, 
+qsczo <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QS_discharge_curve.csv", header = T, 
                 fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 qsczo$DATETIME = as.POSIXct(strptime(qsczo$Date.and.Time, "%Y-%m-%d %H:%M", tz="America/Puerto_Rico"))

@@ -11,7 +11,7 @@ library(grid)
 library(scales)
 
 #pull data - from ODM2 server
-QS <- read.csv2("QSMariaQCondTurbCDOM.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+QS <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QSMariaQCondTurbCDOM.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 
 #need to convert data to numeric for certain columns (we need code columns to remain text)

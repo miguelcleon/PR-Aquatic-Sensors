@@ -9,8 +9,8 @@ library(dplyr)
 library(RColorBrewer)
 library(dataRetrieval)
 
-#QP data from ODM2 server
-qpczo <- read.csv("QP_Qstage.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+#QP data from ODM2
+qpczo <- read.csv("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QP_Qstage.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 ###dates and column names
 qpczo$DATETIME = as.POSIXct(strptime(qpczo$Date.and.Time, "%Y-%m-%d %H:%M", tz="America/Puerto_Rico"))

@@ -9,8 +9,8 @@ library(dplyr)
 library(RColorBrewer)
 library(dataRetrieval)
 
-#pull data - from ODM2 server
-QS <- read.csv2("QS_QstageNO3.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+#pull data - from ODM2
+QS <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QS_QstageNO3.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 
 #convert serial date to POSIX object to allow the timestamp to be compliant with R

@@ -4,8 +4,8 @@ library(tidyr)
 library(dplyr)
 library(readr)
 
-#pull data - from ODM2 server
-QP <- read.csv2("PR_QP_data.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+#pull data - from ODM2
+QP <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/PR_QP_data.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 
 #need to convert data to numeric for certain columns (we need code columns to remain text)

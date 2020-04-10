@@ -12,14 +12,14 @@ library(plyr)
 ##working on just QS here for now####
 
 #pull data - from ODM2 server
-QS <- read.csv2("QSmydatashort.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+QS <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/QSmydatashort.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 #grab data
-czo <- read.csv2("PR Sensors CSV Query.csv", header = T, fill = TRUE,
+czo <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/PR Sensors CSV Query.csv", header = T, fill = TRUE,
                  sep = ",", na.strings=c("","NA"))
 QSczo <- subset(czo, Sample.Name == "QS")
 
-lter <- read.csv2("PR Sensors LTER Query.csv", header = T, fill = TRUE,
+lter <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/PR Sensors LTER Query.csv", header = T, fill = TRUE,
                   sep = ",", na.strings=c("","NA"))
 QSlter <- subset(lter, Sample_ID == "QS")
 

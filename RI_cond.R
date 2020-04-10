@@ -10,7 +10,7 @@ library(cowplot)
 library(dataRetrieval)
 
 #pull data - from ODM2 server
-RI <- read.csv2("RIcond.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+RI <- read.csv2("C:/Users/jpotter/Box/PR Sensors Data/ODM2 Output/RIcond.csv", header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 
 #pull discharge from USGS
