@@ -1,14 +1,4 @@
-library(xts)
 library(ggplot2)
-library(gridExtra)
-library(zoo)
-library(grid)
-library(data.table)
-library(lubridate)
-library(dplyr)
-library(cowplot)
-library(plyr)
-
 library(RODBC)
 
 #pull data - from ODM2 server
@@ -41,17 +31,23 @@ colnames(QS)[20] <- "fDOMQC"
 colnames(QS)[23] <- "turbQC"
 colnames(QS)[26] <- "StagecmQC"
 
-
+#######for use with database connection only (i.e. only Jody & Michelle right now)#####
 #Connect 'R' to Access Database
 #This "file name" needs to match the DSN in the Access ODBC
 #To change this go to Control Panel-Administrative Tools-Data Sources (ODBC)
 #     and create a new Access data source under the User DSN tab
 PRLTER.db <- odbcConnect("PRLTER database") 
 WRRC.db <- odbcConnect("WRRCdatabase", uid="a13579Z", pwd="Jh1188!") 
-
 #pull data
 prlter <- sqlFetch(PRLTER.db,"McD All PRLTER Site Data")
 wrrc <- sqlFetch(WRRC.db,"PR Sensors CSV Query")
+######################################################################################
+
+###using CSVs instead
+prlter <- read.csv("C:/Users/jpotter/Box/PR Sensors Data/WQAL Output/McD All PRLTER Site Data.csv", 
+                   header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
+wrrc <- read.csv("C:/Users/jpotter/Box/PR Sensors Data/WQAL Output/PR Sensors CSV Query.csv", 
+                   header = T, fill = TRUE, sep = ",", na.strings=c("","NA"))
 
 #adjust names
 colnames(prlter)[13] <- "SO4"
